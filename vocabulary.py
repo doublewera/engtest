@@ -20,5 +20,14 @@ def fill_dict(en_ru):
             en_ru[new_word] = new_translate
     return
 
+
+
+def save_dict(en_ru, dict_file_name="mydict.py"):
+    mydict = open(dict_file_name, "w")
+    mydict.write("en_ru = %s" % en_ru)
+    mydict.close()
+    return
+
 fill_dict(en_ru)
+save_dict(en_ru)
 print(en_ru)
